@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome My Love</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Home Page -->
+    <div id="home" class="page">
+        <h1>Welcome, My Love!</h1>
+        <img src="chibi-hug.gif" alt="Chibi Hugging GIF" class="gif">
+        <button onclick="nextPage('confession')">Next</button>
+    </div>
+
+    <!-- Confession Page -->
+    <div id="confession" class="page hidden">
+        <h1>I Love You ❤️</h1>
+        <button onclick="nextPage('proposal')">Next</button>
+    </div>
+
+    <!-- Proposal Page -->
+    <div id="proposal" class="page hidden">
+        <h1>Do you love me? 🥺</h1>
+        <img src="cute-pookie.gif" alt="Cute Pookie Face GIF" class="gif">
+        <div class="buttons">
+            <button onclick="handleResponse('yes')">Yes</button>
+            <button id="no-button" onclick="handleResponse('no')">No</button>
+        </div>
+    </div>
+
+    <!-- Acceptance Page -->
+    <div id="acceptance" class="page hidden">
+        <h1>YAY! I KNEW IT! 😍</h1>
+        <p>I LOVE YOU A LOT AS WELL, MY SWEETHEART! 💖💞😘</p>
+        <button onclick="nextPage('date')">Next</button>
+    </div>
+
+    <!-- Date Invitation Page -->
+    <div id="date" class="page hidden">
+        <h1>Will you go on a date with me? 🌹🥰</h1>
+        <img src="date-invite.gif" alt="Date Invite GIF" class="gif">
+        <div class="buttons">
+            <button onclick="handleDateResponse('yes')">Yes</button>
+            <button id="date-no-button" onclick="handleDateResponse('no')">No</button>
+        </div>
+    </div>
+
+    <!-- Final Page -->
+    <div id="final" class="page hidden">
+        <h1>Can’t wait for our date! 💖🥳 See you soon, love! 😘</h1>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
